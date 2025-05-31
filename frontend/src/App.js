@@ -52,7 +52,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5001/api/summarize', {
+      const response = await fetch('/api/summarize', {
         method: 'POST',
         headers: headers,
         body: requestBody,
