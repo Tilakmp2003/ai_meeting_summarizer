@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "frontend/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
     },
     {
       "src": "app.py",
@@ -16,12 +17,7 @@
       "dest": "app.py"
     },
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*\\.(?:ico|png|jpg|jpeg|gif|svg|webmanifest|txt|map))",
-      "dest": "/$1"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
