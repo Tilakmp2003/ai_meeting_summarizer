@@ -5,7 +5,7 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/build"
+        "distDir": "build"
       }
     },
     {
@@ -20,15 +20,15 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/frontend/build/static/$1"
+      "dest": "/build/static/$1"
     },
     {
       "src": "/(.*\\.(?:ico|png|jpg|jpeg|gif|svg|webmanifest|txt|map))",
-      "dest": "/frontend/build/$1"
+      "dest": "/build/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/build/index.html"
+      "dest": "/build/index.html"
     }
   ]
 }
