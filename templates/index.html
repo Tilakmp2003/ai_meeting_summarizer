@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AI Meeting Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Meeting Transcript</h1>
+        {% if error %}
+            <div class="error-message">{{ error }}</div>
+        {% endif %}
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <p>
+                <label for="transcript_file">Option 1: Select a .txt transcript file</label><br>
+                <input type="file" id="transcript_file" name="transcript_file" accept=".txt">
+            </p>
+            <p style="text-align: center; margin: 10px 0;">OR</p>
+            <p>
+                <label for="transcript_text">Option 2: Paste transcript text</label><br>
+                <textarea id="transcript_text" name="transcript_text" rows="10" style="width: calc(100% - 22px); padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Summarize">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

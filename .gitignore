@@ -1,0 +1,51 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.hypothesis/
+.pytest_cache/
+celerybeat-schedule
+*.pid
+*.seed
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment variables
+.env
+*.env
+.env.*
+
+# Node.js (for the frontend folder, but good to have a general one here too)
+frontend/node_modules/
+frontend/build/
+frontend/.pnp
+frontend/.pnp.js
+frontend/coverage/
+frontend/.DS_Store
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/package-lock.json # Optional: some prefer to commit this
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

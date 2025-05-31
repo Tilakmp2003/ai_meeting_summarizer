@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Meeting Summary Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Summary</h1>
+
+        <h2>Summary</h2>
+        <div class="result-section">
+            <p>{{ summary }}</p>
+        </div>
+
+        <h2>Key Decisions</h2>
+        <div class="result-section">
+            <ul>
+                {% for decision in decisions %}
+                <li>{{ decision }}</li>
+                {% endfor %}
+            </ul>
+            {% if not decisions %}
+            <p>None</p>
+            {% endif %}
+        </div>
+
+        <h2>Action Items</h2>
+        <div class="result-section">
+            <ul>
+                {% for item in action_items %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% if not action_items %}
+            <p>None</p>
+            {% endif %}
+        </div>
+
+        <p><a href="{{ url_for('index') }}">Upload another transcript</a></p>
+    </div>
+</body>
+</html>
